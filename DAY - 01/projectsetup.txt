@@ -1,0 +1,14 @@
+Django project setup :-
+
+1) To create django project run command
+(move to specific location)
+
+command : django-admin startproject <project name>
+
+2) Move to current django project
+
+command : cd <path>	
+
+3) To run django project
+
+command : python manage.py runserver

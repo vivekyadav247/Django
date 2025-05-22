@@ -1,0 +1,10 @@
+Python : It is multipurpose application development programming , used to generate & support multiple type of application development.
+
+-> Support to system s/w
+-> Support to mobile apps
+-> Console based application
+-> Desktop based application
+-> Web based application
+
+-> Support to cloud based application
+-> Data science : ML , AI , IOT .......

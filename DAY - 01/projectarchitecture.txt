@@ -1,0 +1,31 @@
+Django project (mydjapp):
+
+-> MAIN APP(mydjapp folder)
+
+1) settings.py : It is django project level configuration file, it is uniquely identified for entire django project. Hold configurations like
+
+-> list of INSTALLED APP'S in django project 
+-> Database related configuration
+-> List of MIDDLEWARE functionality
+-> Root url configuration
+-> Static files configurations 
+
+2) urls.py : It is main app URL configuration file , hold application level URL'S and used for routing implementation
+
+
+3) wsgi.py : It is django's deployement platform used to provide interface for communication between application and server
+
+
+4) asgi.py
+5) __init__.py
+
+-> manage.py : Django's command-line utility for administrative tasks, this file is responsible to take administrative decisions like environment  check, load settings....
+
+
+
+
+
+
+
+
+	

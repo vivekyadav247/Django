@@ -1,0 +1,15 @@
+-> Basic programming : operators , controll structure (conditional statements , controll statements , jumping statement)
+-> Functions & Modules(custom modules)
+-> Sequences : list , tuple , dictionary
+-> OOPS
+
+----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+

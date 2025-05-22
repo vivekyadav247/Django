@@ -1,0 +1,90 @@
+Django : It is python based web application development framework used to develop, web based application by implementing all real world requirements. Django is used to deploy server side of web based applications.
+
+Note: As Django is python based application development framework hence it is dependent on python version
+
+Django 1 : Python 2
+
+Django 2 : Python 3 (Python<=3.5)
+
+Django 3,4,5 : Python 3 (Python>=3.8 & pip>=19 )
+
+Latest version of Python : Python-3.13.1
+Latest PIP version : PIP-24.3.1
+Latest version of Django : Django-5.2.1 
+
+Release data : 21 July 2005; 17 years ago
+
+URL : https://www.djangoproject.com/ 
+
+--------------------------------------------------
+
+PIP version :- Pip is a package-management system written in Python and is used to install and manage software packages. The Python Software Foundation recommends using pip for installing Python applications and its dependencies during deployment.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Features of Django:
+
+1) Open source : Django is python based web application development framework which is freely available
+
+2) Platform independent : As it is dependent on python version, it can be deployed on any platform if provided with specific python environment
+
+3)Framework approach : As it is python based web application development framework it usually follows MVT(Model-View-Template) approach instead of MVC(Model-View-Controller) approach.
+
+MVT => Model View Templates
+
+4)ORM : It stands for object resource model, an object oreinted representations for database related implementations
+
+5)Internationalization or multilingual support
+
+6)DRY =>Dont repeat yourself
+
+Django project : Multiple Apps
+
+ERP1 : * Admin * User * Placement
+ERP2 : * Admin * Accounts * Staff    
+
+7)Portable 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

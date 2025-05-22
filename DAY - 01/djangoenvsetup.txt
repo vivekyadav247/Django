@@ -1,0 +1,22 @@
+Step to setup django environment:-
+
+1) Install latest version of python-3.13 (min : py>=3.6)
+
+command : python -V
+
+2) Install latest version of PIP-24.3.1 (min : py>=19)
+
+command : pip -V
+
+3) Install django
+
+command : pip install Django==5.2.1
+
+4) To check version of django
+
+command : django-admin version
+
+
+
+
+
