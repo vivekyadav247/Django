@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Home Page</title>
+    <title>Register Page</title>
 </head>
 <body>
     <h1>Welcome to Register Page</h1>
@@ -11,5 +11,48 @@
     <a href='/service/'>Services</a><br><br>
     <a href='/register/'>Register Page</a><br><br>
     <a href='/login/'>Login Page</a><br><br>
+
+    <hr/><hr/>
+
+    <form method="post" action="/register/">
+
+        {% csrf_token %}
+        
+        <label>Roll no.</label>
+        <input type="text" name="rno" placeholder="Enter Roll No. "/>
+
+        <br/><br/>
+
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter Your Name "/>
+
+        <br/> <br/>
+
+        <label>Physics</label>
+        <input type="text" name="phy" placeholder="Enter Your Physics Marks "/>
+
+        <br/> <br/>
+
+        <label>Chemistry</label>
+        <input type="text" name="che" placeholder="Enter Your Chemistry Marks "/>
+
+        <br/> <br/>
+
+        <label>Maths</label>
+        <input type="text" name="mth" placeholder="Enter Your Maths Marks "/>
+
+        <br/> <br/>
+
+        <label>Computer</label>
+        <input type="text" name="comp" placeholder="Enter Your Computer Marks "/>
+
+        <br/> <br/>
+
+        <input type="submit" placeholder="SUBMIT"/>
+    </form>
+
+    
+    
+    
 </body>
 </html>

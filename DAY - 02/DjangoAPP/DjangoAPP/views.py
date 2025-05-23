@@ -55,16 +55,30 @@ def home(request):
 def about(request):
     a,b = 200 , 100
     c=a+b
-    return render(request,"about.html",{"a":a,"b":b,"c":c})
+
+    mks = [12,34,56,78]
+
+    empDetails = {"eno":1001,"enm":"Vivek","esal":1000000}
+
+    return render(request,"about.html",{"a":a,"b":b,"c":c,"marks":mks,"empDetails":empDetails})
 
 def contact(request):
-    return render(request,"contact.html")
+    users = [{"uid":1001,"unm":"@username1","upass":"xyz@123"},
+             {"uid":1002,"unm":"@username2","upass":"xyz@321"},
+             {"uid":1003,"unm":"@username3","upass":"xyz@000"}]
+
+    return render(request,"contact.html",{"users":users})
 
 def service(request):   
     return render(request,"service.html")
 
 def register(request):
-    return render(request,"register.html")
+    if request.method=="GET":
+        return render(request,"register.html")
+    else :
+        print(request.POST)
+        return render(request,"register.html")
 
+    
 def login(request):
     return render(request,"login.html")

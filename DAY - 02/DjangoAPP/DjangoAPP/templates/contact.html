@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Home Page</title>
+    <title>Contact Page</title>
 </head>
 <body>
     <h1>Welcome to Contact</h1>
@@ -11,5 +11,28 @@
     <a href='/service/'>Services</a><br><br>
     <a href='/register/'>Register Page</a><br><br>
     <a href='/login/'>Login Page</a><br><br>
+
+    <h1>View and Manage User details</h1>
+    <table border="3" cellspacing="8" cellpadding="8">
+        <tr>
+            <th>UserID</th>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+
+        {% for row in users%}
+        <tr>
+            <td>
+                {{row.uid}}
+            </td>
+            <td>
+                {{row.unm}}
+            </td>
+            <td>
+                {{row.upass}}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
