@@ -12,4 +12,8 @@ urlpatterns = [
     path('service/',views.service),
     path('register/',views.register),
     path('login/',views.login),
+    path('myadmin/',views.adminhome),
+    path('user/',views.userhome),
+    path('manageusers/',views.manageusers),
+    path('manageuserstatus/',views.manageuserstatus),
 ]
