@@ -1,56 +1,45 @@
 {% load static %}
-{% include "header.html" %}
-{% include "nav.html" %}
-{% include "slider.html" %}
-<div id="page">
+<!-- page starts -->
+	<div id="page">
 		<div id="content">
-			<div class="box" style="text-align:center">
-				<h2>Welcome to Share IT , Login Page</h2>
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus accusantium dolorem corrupti maiores voluptates eius impedit repudiandae voluptatem, enim et cum illum. Reiciendis eos saepe animi quos quae minima. Obcaecati!
-					Esse porro incidunt possimus quod ullam id adipisci. Fuga doloremque ut rerum atque error voluptatum veritatis reprehenderit. Obcaecati, eos aliquid labore ipsam minus aliquam reprehenderit nemo possimus exercitationem odit distinctio.
-					Aut quas totam similique veritatis modi harum rerum, quasi ullam a! Alias itaque, pariatur eum ducimus perferendis, velit omnis qui, nisi optio iusto ut error tenetur fuga veritatis laboriosam sapiente.
-					Voluptatum maxime repellat id expedita laboriosam molestiae obcaecati nulla officiis excepturi aliquid aspernatur debitis praesentium voluptate soluta dicta impedit optio quaerat vitae consequuntur, facere quam corporis! Enim aspernatur inventore corporis.
-					Velit consectetur recusandae, tenetur, perferendis ab debitis esse sit, illo modi praesentium placeat iure? Enim est quibusdam tempora perspiciatis expedita debitis nobis minima, soluta doloremque iusto repudiandae maiores? Temporibus, hic?
-					Itaque maxime ratione veniam voluptates cum commodi harum iusto quo, est, earum odio facilis voluptas qui, delectus odit aperiam. Provident natus labore nam magnam dolorum veniam, explicabo optio numquam eaque?
-					Dolor modi, delectus ab assumenda hic laudantium molestiae illo autem, incidunt excepturi corporis perspiciatis quod nam sunt facilis perferendis quae error voluptatibus repudiandae voluptates, sit quos quo. Quae, quis iure?
-					Velit laborum nemo ipsa minus est aliquid beatae, esse quidem omnis reprehenderit voluptatum maiores aperiam, iste eligendi harum numquam eaque cum exercitationem rem fugit. Ducimus repudiandae iure quibusdam totam ipsam?
-					Dolores, officia consequatur maiores sint ipsa sit iusto modi nisi velit distinctio voluptatum pariatur voluptas blanditiis, nihil reiciendis? Repellat officiis veritatis fugit vel voluptas velit rem beatae dicta quia molestiae!
-					Quod delectus nobis, laborum est commodi sequi eos accusamus consequatur asperiores vitae, ab expedita labore exercitationem nostrum, autem perspiciatis! Sit molestias, reiciendis quo et soluta sapiente ab perferendis cum distinctio!
-				</p>
+			<div class="box">
+<font style="font-size:20px;color:blue;">{{output}}</font>	
+<h2>Login Here!!!</h2>
+<form method="post" action="/login/" >
+{% csrf_token %}	
+<table cellspacing="20">
+<tr>
+<td>Username(Email)</td>
+<td><input class="inpt" type="text" name="email"/></td>	
+</tr>	
+<tr>
+<td>Password</td>
+<td><input class="inpt" type="password" name="password"/></td>	
+</tr>
+<tr>
+<td><input type="submit" value="Login"/></td>	
+</tr>
+</table>	
+</form>				
 			</div>
 			<br class="clearfix" />
 		</div>
+
+
 		<div id="sidebar">
 			<div class="box">
-				<h3>Cursus magnis</h3>
+				<h3>Social Links</h3>
 				<ul class="list">
 					<li class="first"><a href="#">Gmail</a></li>
 					<li><a href="#">Linkedin</a></li>
 					<li><a href="#">Facebook</a></li>
 					<li><a href="#">Instagram</a></li>
-					<li class="last"><a href="#">Twitter</a></li>
+					<li class="last"><a href="#">Google+</a></li>
 				</ul>
 			</div>
+			
 		</div>
+
 		<br class="clearfix" />
 	</div>
-	<div id="page-bottom">
-		<div id="page-bottom-content">
-			<h3>About</h3>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis nam magnam tempora earum nostrum veritatis enim sint. Dolore, voluptas? Atque praesentium dolor unde cupiditate aut, minus eligendi numquam? Qui eveniet eius aliquid aperiam iste necessitatibus et cumque architecto repellat laborum ut, culpa, placeat neque error. Eos magnam voluptates quibusdam nisi, ut sequi sit ratione modi laboriosam obcaecati unde architecto?
-			</p>
-		</div>
-		<div id="page-bottom-sidebar">
-			<h3>Quick Links</h3>
-			<ul class="list">
-				<li class="first"><a href="#">Home</a></li>
-				<li><a href="#">Login</a></li>
-				<li class="last"><a href="#">Register</a></li>
-			</ul>
-		</div>
-		<br class="clearfix" />
-	</div>
-</div>
-{% include "footer.html"%}
+	<!-- page ends -->
