@@ -12,3 +12,13 @@ class Register(models.Model):
     status=models.IntegerField()
     role=models.CharField(max_length=10)
     info=models.CharField(max_length=50)
+
+
+class sharenotes(models.Model):
+    dcid = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=50)
+    category = models.CharField(max_length=50)
+    description = models.CharField(max_length=500)
+    fiename = models.CharField(max_length=100)
+    uid = models.CharField(max_length=50)
+    info = models.CharField(max_length=50)

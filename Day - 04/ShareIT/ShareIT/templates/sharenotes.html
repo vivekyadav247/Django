@@ -1,0 +1,63 @@
+{% load static %}
+{% include "userheader.html" %}
+{% include "usernav.html" %}	
+	
+		
+
+	<div id="page">
+		<h2>Uploaad Your Notes</h2>
+
+      <form method="post" action="/sharenotes/" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table cellspacing="20">
+          <tr>
+            <td>Title</td>
+            <td>
+              <input
+                class="inpt"
+                type="text"
+                name="title"
+                placeholder="Enter the Title"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Category</td>
+            <td>
+              <select class="inpt" name="category">
+                <option>Select Category</option>
+                <option>Project Report</option>
+                <option>Assignment</option>
+				<option>Notes<option/>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Description</td>
+            <td>
+              <textarea
+                rows="5"
+                name="description"
+                placeholder="Enter Description"
+              ></textarea>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>Upload Files</td>
+            <td>
+              <input
+                class="inpt"
+                type="file"
+                name="file"
+                placeholder="Choose files"
+              />
+            </td>
+          </tr>
+            <td><input type="submit" value="Submit" /></td>
+          </tr>
+        </table>
+      </form>
+	</div>
+	
+{% include "footer.html"%}

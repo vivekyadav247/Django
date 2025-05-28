@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render , redirect
 
+from django.core.files.storage import FileSystemStorage
+
 from . import models 
 import time
 
@@ -28,6 +30,8 @@ def login(request):
         userDetails=models.Register.objects.filter(email=email,password=password,status=1)
 
         if len(userDetails)>0:
+            request.session['sunm'] = userDetails[0].email
+            request.session['role'] = userDetails[0].role
             if(userDetails[0].role=="admin"):
                 return redirect("/myadmin/")
             else :
@@ -55,10 +59,10 @@ def register(request):
         return render(request,"register.html",{"output":"User register successfully...."})
     
 def adminhome(request):
-    return render(request,"adminhome.html")
+    return render(request,"adminhome.html",{"sunm":request.session["sunm"]})
 
 def userhome(request):
-    return render(request,"userhome.html")
+    return render(request,"userhome.html",{"sunm":request.session["sunm"]})
 
 def manageusers(request):
 
@@ -79,3 +83,25 @@ def manageuserstatus(request):
         models.Register.objects.filter(regid=regid).delete()
 
     return redirect("/manageusers/")
+
+def sharenotes(request):
+    if request.method=="GET":
+        return render(request,"sharenotes.html",{"sunm":request.session["sunm"],"output" : ""})
+    else :
+
+        title = request.POST.get("title")
+        category = request.POST.get("category")
+        description = request.POST.get("description")
+
+        file=request.FILES["file"]
+        fs = FileSystemStorage()
+        filename = fs.save(file.name,file)
+
+        p = models.sharenotes(title=title, category=category,description=description,fiename=filename,uid=request.session["sunm"],info=time.asctime())
+        p.save()
+        return render(request,"sharenotes.html",{"sunm":request.session["sunm"],"output":"Content uploaded successfully....."})
+    
+
+def viewnotes(request) :
+    data = models.sharenotes.objects.all()
+    return render(request,"viewnotes.html",{"sunm":request.session["sunm"],"data":data})
