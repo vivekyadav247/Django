@@ -6,6 +6,8 @@ from django.core.files.storage import FileSystemStorage
 from . import models 
 import time
 
+from . import emailAPI 
+
 def home(request):
     return render(request,"home.html")
 
@@ -56,6 +58,10 @@ def register(request):
         #to insert record in database using models
         p=models.Register(name=name,email=email,password=password,mobile=mobile,address=address,city=city,gender=gender,status=0,role="user",info=time.asctime())
         p.save()
+
+        # to integrate email api 
+        emailAPI.sendemail(email,password)
+
         return render(request,"register.html",{"output":"User register successfully...."})
     
 def adminhome(request):
@@ -105,3 +111,8 @@ def sharenotes(request):
 def viewnotes(request) :
     data = models.sharenotes.objects.all()
     return render(request,"viewnotes.html",{"sunm":request.session["sunm"],"data":data})
+
+def verify(request):
+    vemail=request.GET.get("vemail")
+    models.Register.objects.filter(email=vemail).update(status=1)
+    return redirect("/user/")
